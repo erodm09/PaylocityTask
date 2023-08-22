@@ -2,7 +2,8 @@
 
 <details>
 
-<summary>Bug 01- Error Occured processing request/summary>
+<summary>Bug 01- Error Occured processing request</summary>
+
 ## Description
 Upon attempting to process a user's request, an error occurs with the following details:
 
@@ -15,7 +16,7 @@ Additionally, the message provides an option to enable "Development Mode" for mo
 
 ## Steps To Reproduce
 
-1.Go to the URL: `https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login`
+1.Go to the URL: https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login
 
 2.Enter invalid characters in the `Username` and `Password` fields
 
@@ -49,11 +50,11 @@ Add any other context about the problem here
 
 <details>
 
-<summary>Bug 02- Error Handling not clearing after User goest back</summary>
+<summary>Bug 02- Error Handling not clearing after User goes back</summary>
 
 
 ## Description
-After a user inputs an incorrect or missing password during the login process and then attempts to rectify the error by refreshing the page, the initial error message persists. The error message indicates that an incorrect password was provided and provides a Request ID for tracking.
+After a user inputs an incorrect or missing password during the login process and then inputs incorrect password or username, and proceeds after the error displayed, to rectify it by refreshing the page, the initial error message persists about the missing Username or Password. The error message indicates that an incorrect password was provided.
 
 ## Steps To Reproduce
 
@@ -76,12 +77,16 @@ After a user inputs an incorrect or missing password during the login process an
 Error Message: An error occurred while processing your request is shown to the user. Alogn with Request ID: 0HMT379708TF5 is also displayed, all errors after the user clicks on the Login button
 
 ## Expected behavior
-A clear and concise description of what you expected to happen.
+Even after refreshing the page, the initial error message indicating an incorrect or missing password continues to be displayed, which could cause user confusion and potentially impact the user experience.
 
 ## Priority
-High
+Medium
 
 ## Screenshots/Video
+
+
+https://github.com/erodm09/PaylocityTask/assets/102558006/71ab68e4-26da-44d3-945b-a135be60b309
+
 
 
 ## Device Details:
@@ -91,4 +96,4 @@ Version: Mac OS Monterrey Version 12.4
 Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
 Resolution [2560 × 1600]
 
-
+</details>
