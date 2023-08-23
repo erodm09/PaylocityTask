@@ -98,3 +98,49 @@ Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
 Resolution [2560 × 1600]
 
 </details>
+
+<details>
+
+<summary>Bug 03- Paylocity Benefits Dashboard link available and shown to user after clicking</summary>
+
+
+## Description
+After a user inputs an incorrect or missing password during the login process and then inputs incorrect password or username, and proceeds after the error displayed, to rectify it by refreshing the page, the initial error message persists about the missing Username or Password. The error message indicates that an incorrect password was provided.
+
+## Steps To Reproduce
+
+1. Go to the following Login website link
+2.On the upper left corner click on the Paylocity Benefits Dashboard message link.
+3. Note that no login credentials are required to access the dashboard.
+Observe that the form to add dependents is accessible and can be interacted with.
+
+## Actual behavior
+1. The Paylocity Benefits Dashboard is accessible without requiring login credentials.
+2.Users can interact with the form to try and add dependents without proper authentication or employee data.
+
+## Expected behavior
+1.The Paylocity Benefits Dashboard should require proper login credentials before allowing access.
+2.Users should only be able to interact with the form and access data if they are authenticated and authorized users.
+3.Unauthorized users should not have access to any functionality of the dashboard.
+
+## Priority
+Low
+
+## Screenshots/Video
+
+
+
+https://github.com/erodm09/PaylocityTask/assets/102558006/76590c0a-6083-4095-8dbc-10ae96b9acab
+
+
+
+
+## Device Details:
+
+OS: MacOs
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
