@@ -144,3 +144,46 @@ Resolution [2560 × 1600]
 
 </details>
 
+<details>
+
+<summary>Bug 04- No Error Message when inputing larger than required characters on First Name</summary>
+
+
+## Description
+When attempting to input larger than required characters in the "First Name" field during the process of adding or editing an employee on the Benefits Dashboard application, no error message is displayed, and the application allows the user to proceed without any indication of the input exceeding the limit.
+
+## Steps To Reproduce
+
+1.Open the Benefits Dashboard application.
+2.Navigate to the section where you can add or edit an employee.
+3.In the "First Name" field, input a string of characters that is longer than the specified limit (e.g., more than 50 characters).
+4.Attempt to proceed by clicking the "Save" or "Submit" button
+
+## Actual behavior
+No error message is shown, and the application doesnt let the user know that is inputing a wrong field
+
+## Expected behavior
+An error message should be displayed on the UI, indicating that the input for the "First Name" field exceeds the allowed character limit.
+
+## Priority
+Low
+
+## Screenshots/Video
+
+
+
+
+https://github.com/erodm09/PaylocityTask/assets/102558006/2bd71e5c-6b43-4fb3-9e81-7fe72576a863
+
+
+
+
+
+## Device Details:
+
+OS: MacOs
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
