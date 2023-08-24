@@ -60,7 +60,7 @@ After a user inputs an incorrect or missing password during the login process an
 
 ## Steps To Reproduce
 
-1.Navigate to the login page.
+1.Navigate to the login page at https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login 
 
 2.Input an incorrect `password` or leave the `password` field blank.
 
@@ -110,7 +110,7 @@ After a user inputs an incorrect or missing password during the login process an
 
 ## Steps To Reproduce
 
-1. Go to the following Login website link
+1. Go to the following website link to Login at https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login
 2.On the upper left corner click on the Paylocity Benefits Dashboard message link.
 3. Note that no login credentials are required to access the dashboard.
 Observe that the form to add dependents is accessible and can be interacted with.
@@ -155,9 +155,11 @@ When attempting to input larger than required characters in the "First Name" fie
 
 ## Steps To Reproduce
 
-1.Open the Benefits Dashboard application.
+1.Open the Benefits Dashboard application on the following link https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login
 
-2.Navigate to the section where you can add or edit an employee.
+2. Login using valid credentials for Username and Password. 
+
+3.Navigate to the section where you can add an employee by clicking on `Add Employee` button
 
 3.In the "First Name" field, input a string of characters that is longer than the specified limit (e.g., more than 50 characters).
 
@@ -208,7 +210,7 @@ Have an existing user with valid First Name, Last Name and Dependent.
 
 ## Steps To Reproduce
 
-1.Go to link for the application to
+1.Go to link for the application to login at https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login
 
 2.Enter valid details for Username and password and click on the Login button
 
