@@ -181,7 +181,6 @@ https://github.com/erodm09/PaylocityTask/assets/102558006/2bd71e5c-6b43-4fb3-9e8
 
 
 
-
 ## Device Details:
 
 OS: MacOs
