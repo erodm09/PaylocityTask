@@ -1,5 +1,6 @@
 
-# Paylocity STE Assessment- Bug Challenge
+# Paylocity STE Assessment- Bug Challenge :bug: 🔍 
+
 
 <details>
 
@@ -449,7 +450,7 @@ Resolution [2560 × 1600]
 
 <details>
 
-<summary>Bug 10-API -  Incorrect Response for GET Request with Non-Existing Employee ID</summary>
+<summary>Bug 10-API -  Error with Invalid ID in GET Request Body for Employee Updated</summary>
 
 
 ## Description
