@@ -155,8 +155,11 @@ When attempting to input larger than required characters in the "First Name" fie
 ## Steps To Reproduce
 
 1.Open the Benefits Dashboard application.
+
 2.Navigate to the section where you can add or edit an employee.
+
 3.In the "First Name" field, input a string of characters that is longer than the specified limit (e.g., more than 50 characters).
+
 4.Attempt to proceed by clicking the "Save" or "Submit" button
 
 ## Actual behavior
@@ -187,3 +190,104 @@ Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
 Resolution [2560 × 1600]
 
 </details>
+
+<details>
+
+<summary>Bug 05-Duplicate Employee Addition with Same Details is allowed</summary>
+
+
+## Description
+
+The current version of the application permits the addition of an employee with the exact same First Name, Last Name, and Dependents as an existing entry. This oversight leads to the creation of duplicate employee records within the system, causing potential data inconsistency and confusion.
+
+
+## Pre-condition
+
+Have an existing user with valid First Name, Last Name and Dependent.
+
+
+## Steps To Reproduce
+
+1.Go to link for the application to
+
+2.Enter valid details for Username and password and click on the Login button
+
+2.Click on the `Add Employee` button
+
+3.Input the same First Name, Last Name, and Dependents as an already existing employee.
+
+4.Proceed with adding the employee by clicking on the Save button
+
+## Actual behavior
+No error message is shown, and the application doesnt let the user know that he/she is adding a Duplicat or existing user
+
+## Expected behavior
+An error message should be displayed on the UI, indicating that the entered user already exists to Try agian.
+
+## Priority
+High
+
+## Screenshots/Video
+
+
+https://github.com/erodm09/PaylocityTask/assets/102558006/394f08af-6fc7-42e9-a5d7-65c27b79dc05
+
+
+
+## Device Details:
+
+OS: MacOs
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
+<details>
+
+<summary>Bug 06-API - Error Sending POST Request with Invalid String on dependent field</summary>
+
+
+## Description
+
+While using Postman to send a POST request to add a New employee, an error is encountered when an invalid string value is provided as the dependent's field. The application should handle and validate input data to prevent the addition of invalid or incorrect values.
+
+
+## Pre-condition
+
+Have the valid Postman collection imported in Postman
+
+
+## Steps To Reproduce
+
+1. Launch Postman and access the QA Challenge- Master collection
+2. Go to the POST request `Add Employee` for adding a new Employee.
+3. On the Depndent field enter an invalid string (e.g., "X") as the dependent's number information.
+4. Click on the Send button to send the POST request.
+
+## Actual behavior
+Upon sending the POST request, it allows the input of an invalid string as the dependent's field information. After sending an error occurs, but the error message is not descriptive enough to identify the issue.
+
+## Expected behavior
+If an invalid string value is provided, the application should display an error message indicating that the input is invalid. 
+
+## Priority
+Medium
+
+## Screenshots/Video
+
+
+<img width="1366" alt="Screen Shot 2023-08-24 at 0 19 36" src="https://github.com/erodm09/PaylocityTask/assets/102558006/7b925d27-3746-4a43-a7de-bcfde3726a42">
+
+
+
+## Device Details:
+Postman Version: 10.17.3-230823-0523
+OS: MacOs 10.15.7
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
+
