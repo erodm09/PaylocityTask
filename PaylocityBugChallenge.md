@@ -290,4 +290,110 @@ Resolution [2560 × 1600]
 
 </details>
 
+<details>
+
+<summary>Bug 07-API -  Invalid ID in PUT Request Body for Employee Updated</summary>
+
+
+## Description
+
+When attempting to update an employee's information using a PUT request, an error is encountered due to an invalid ID being provided in the request body. The application should handle and validate input data to ensure that only valid IDs are accepted for updates
+
+
+## Pre-condition
+
+Have the valid Postman collection imported in Postman
+
+
+## Steps To Reproduce
+
+1. Launch Postman and access the QA Challenge- Master collection
+2. Go to the PUT request `Update Employee` for editing an Employee.
+3. On the Request body include an invalid ID value of a user.
+4. Click on the Send button to send the PUT request.
+
+
+## Actual behavior
+The application accepts the PUT request with an invalid ID value in the request body.The server responds with an error message that is not specific enough to identify the issue.
+
+## Expected behavior
+The application should validate the provided ID to ensure that it is a valid and existing employee ID.If an invalid ID is detected in the request body, the application should return a clear error response indicating that the ID is not valid
+
+## Priority
+High
+
+## Screenshots/Video
+
+<img width="1315" alt="Screen Shot 2023-08-24 at 12 46 23" src="https://github.com/erodm09/PaylocityTask/assets/102558006/a4c4275a-0e19-4243-9836-c01d0ae17fd5">
+
+
+
+## Device Details:
+Postman Version: 10.17.3-230823-0523
+OS: MacOs 10.15.7
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
+<details>
+
+<summary>Bug 08-API -  Incorrect Response for DELETE Request with Non-Existing Employee ID</summary>
+
+
+## Description
+
+When sending a DELETE request to remove an employee from the system, if an employee ID that has already been deleted or does not exist is provided in the request URL, the application responds with a "200 OK" status. This behavior is misleading as it suggests successful deletion, even though the employee does not exist in the first place.
+
+## Pre-condition
+
+Have the valid Postman collection imported in Postman
+
+
+## Steps To Reproduce
+
+1. Launch Postman and access the QA Challenge- Master collection
+2. Go to the DELETE request `Delete Employee` to remove an Employee.
+3. On the Request URL include an invalid ID or already deleted employee ID value of a user.
+4. Click on the Send button to send the DELTE request.
+
+
+## Actual behavior
+The application accepts the DELETE request with a non-existing or already deleted employee ID. The server responds with a "200 OK" status, which incorrectly suggests successful deletion.
+
+## Expected behavior
+The application should validate the provided employee ID to ensure that it exists in the system. If a non-existing or already deleted ID is detected, the application should return a "404 Not Found" status or an appropriate error response indicating that the employee does not exist.
+
+## Priority
+High
+
+## Impact:
+This issue has the following negative impacts:
+
+Misleading Response: The "200 OK" status implies successful deletion when the employee does not exist, leading to confusion and incorrect assumptions.
+Data Integrity: Users might believe they have successfully deleted a nonexistent employee, affecting data integrity and accuracy.
+Ineffective Error Handling: The application fails to provide accurate error responses for such cases, making troubleshooting difficult.
+
+## Screenshots/Video
+<img width="1273" alt="Screen Shot 2023-08-24 at 13 08 43" src="https://github.com/erodm09/PaylocityTask/assets/102558006/65eae627-a7e2-41f3-b249-ac055f4051bb">
+
+<img width="1342" alt="Screen Shot 2023-08-24 at 13 09 02" src="https://github.com/erodm09/PaylocityTask/assets/102558006/e499b90c-9e7c-47d6-888f-681419484a11">
+
+<img width="1342" alt="Screen Shot 2023-08-24 at 13 09 02" src="https://github.com/erodm09/PaylocityTask/assets/102558006/23adfafd-6d78-47e1-9700-cc470664e2e7">
+
+<img width="1384" alt="Screen Shot 2023-08-24 at 13 10 09" src="https://github.com/erodm09/PaylocityTask/assets/102558006/89c912ef-f652-41fc-bd83-6aad6d2dd517">
+
+
+
+## Device Details:
+Postman Version: 10.17.3-230823-0523
+OS: MacOs 10.15.7
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
+
 
