@@ -291,7 +291,7 @@ Resolution [2560 × 1600]
 
 <details>
 
-<summary>Bug 07-API -  Invalid ID in PUT Request Body for Employee Updated</summary>
+<summary>Bug 07-API -  Error with Invalid ID in PUT Request Body for Employee Updated</summary>
 
 
 ## Description
@@ -393,4 +393,103 @@ Resolution [2560 × 1600]
 </details>
 
 
+
+<details>
+
+<summary>Bug 09-API -  Incorrect Response for GET Request with Non-Existing Employee ID</summary>
+
+
+## Description
+
+When sending a GET request to remove an employee from the system, if an employee ID that has already been deleted or does not exist is provided in the request URL, the application responds with a "200 OK" status. This behavior is misleading as it suggests successful, even though the employee does not exist in the first place.
+
+## Pre-condition
+
+Have the valid Postman collection imported in Postman
+
+
+## Steps To Reproduce
+
+1. Launch Postman and access the QA Challenge- Master collection
+2. Go to the GET request `Get Employee` to retreive information of an Employee.
+3. On the Request URL input an already non existing or recently deleted employee ID value of a user.
+4. Click on the Send button to send the GET request.
+
+
+## Actual behavior
+The application accepts the GET request with a non-existing or already deleted employee ID. The server responds with a "200 OK" status, which incorrectly suggests successful retreivement of Employee details.
+
+## Expected behavior
+The application should validate the provided employee ID to ensure that it exists in the system. If a non-existing or already deleted ID is detected, the application should return a "404 Not Found" status or an appropriate error response indicating that the employee does not exist.
+
+## Priority
+High
+
+## Impact:
+This issue has the following negative impacts:
+
+Misleading Response: The "200 OK" status implies successful deletion when the employee does not exist, leading to confusion and incorrect assumptions.
+Data Integrity: Users might believe they have successfully deleted a nonexistent employee, affecting data integrity and accuracy.
+Ineffective Error Handling: The application fails to provide accurate error responses for such cases, making troubleshooting difficult.
+
+## Screenshots/Video
+
+<img width="1384" alt="Screen Shot 2023-08-24 at 13 10 09" src="https://github.com/erodm09/PaylocityTask/assets/102558006/3e3101a7-bcc0-4dbe-86a4-210941aeccc2">
+
+
+## Device Details:
+Postman Version: 10.17.3-230823-0523
+OS: MacOs 10.15.7
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
+
+<details>
+
+<summary>Bug 10-API -  Incorrect Response for GET Request with Non-Existing Employee ID</summary>
+
+
+## Description
+
+When attempting to retreive an employee's information using a GET request, an error is encountered due to an invalid ID being provided in the request URL. The application should handle and validate input data to ensure that only valid IDs are accepted for updates
+
+## Pre-condition
+
+Have the valid Postman collection imported in Postman
+
+
+## Steps To Reproduce
+
+1. Launch Postman and access the QA Challenge- Master collection
+2. Go to the GET request `GET Employee` to retrieve an Employee's information.
+3. On the Request body include an invalid ID value of an Employee.
+4. Click on the Send button to send the GET request.
+
+
+## Actual behavior
+The application accepts the GET request with an invalid ID value in the request URL.The server responds with an error message that is not specific enough to identify the issue.
+
+## Expected behavior
+The application should validate the provided ID in the URL to ensure that it is a valid and or non existing employee ID.If an invalid ID is detected in the request body, the application should return a clear error response indicating that the ID is not valid
+
+## Priority
+High
+
+## Screenshots/Video
+
+<img width="1370" alt="Screen Shot 2023-08-24 at 14 08 42" src="https://github.com/erodm09/PaylocityTask/assets/102558006/1b8cd3d1-b80d-4afd-8a13-787892923397">
+
+<img width="1022" alt="Screen Shot 2023-08-24 at 14 09 49" src="https://github.com/erodm09/PaylocityTask/assets/102558006/beaa4b9c-7b1a-470a-b546-06f068ac8fdc">
+
+## Device Details:
+Postman Version: 10.17.3-230823-0523
+OS: MacOs 10.15.7
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
 
