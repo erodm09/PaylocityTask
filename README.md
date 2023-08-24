@@ -6,6 +6,8 @@ Welcome to the Bug Challenge Solutions repository! In this repository, you'll fi
 
 On the file named `PaylocityBugChallenge.md ` you will see tne different dropdown Bugs and categorized by numbers(e.g Bug 01,etc).You will find the list of 11 bugs found, analyzed and documented.
 
+On the file `QA Challenge- Master.postman_collection.json` you will find the Postman Collection used to run the API tests with all the mentioned requets that are detailed in the Bugs found.
+ 
 Other options: 
 Clone the Repository: Begin by cloning this repository to your local machine using the following command:
 
