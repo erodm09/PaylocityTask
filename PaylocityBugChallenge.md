@@ -379,8 +379,6 @@ Ineffective Error Handling: The application fails to provide accurate error resp
 
 <img width="1342" alt="Screen Shot 2023-08-24 at 13 09 02" src="https://github.com/erodm09/PaylocityTask/assets/102558006/e499b90c-9e7c-47d6-888f-681419484a11">
 
-<img width="1342" alt="Screen Shot 2023-08-24 at 13 09 02" src="https://github.com/erodm09/PaylocityTask/assets/102558006/23adfafd-6d78-47e1-9700-cc470664e2e7">
-
 <img width="1384" alt="Screen Shot 2023-08-24 at 13 10 09" src="https://github.com/erodm09/PaylocityTask/assets/102558006/89c912ef-f652-41fc-bd83-6aad6d2dd517">
 
 
