@@ -494,3 +494,53 @@ Resolution [2560 × 1600]
 
 </details>
 
+<details>
+
+<summary>Bug 11-API -  Inconsistent Response for PUT Request with Unchanged User Detailsd</summary>
+
+
+## Description
+
+When sending a PUT request to edit a user's information, if the request body contains the same details as the existing user, the application responds with a "200 OK" status. This behavior is inconsistent with the expectation that only changes in user details should trigger a successful update response.
+
+## Pre-condition
+
+Have the valid Postman collection imported in Postman
+
+
+## Steps To Reproduce
+
+1. Launch Postman and access the QA Challenge- Master collection
+2. Go to the PUT request `Update Employee` to retrieve an Employee's information.
+3. Provide the exact same details as the existing user in the request body.
+4. Click on the Send button to send the PUT request.
+
+
+## Actual behavior
+The application accepts the PUT request with unchanged user details in the request body.The server responds with a "200 OK" status, suggesting a successful update even though no changes were made.
+
+## Expected behavior
+The application should validate the provided user details against the existing user's information.If the user details in the request body are identical to the existing user, the application should return a "304 Not Modified" status or an appropriate response indicating that no changes were made.
+
+## Priority
+Medium
+
+## Screenshots/Video
+
+<img width="718" alt="Screen Shot 2023-08-24 at 14 44 31" src="https://github.com/erodm09/PaylocityTask/assets/102558006/f3dd5599-6c6d-4c37-9e33-4dcd64b9b71c">
+
+<img width="798" alt="Screen Shot 2023-08-24 at 14 44 45" src="https://github.com/erodm09/PaylocityTask/assets/102558006/436b6489-8865-4424-9535-5214f578a167">
+
+<img width="1201" alt="Screen Shot 2023-08-24 at 14 46 50" src="https://github.com/erodm09/PaylocityTask/assets/102558006/0610394b-24ea-4308-87f5-1585c8ae464e">
+
+
+
+## Device Details:
+Postman Version: 10.17.3-230823-0523
+OS: MacOs 10.15.7
+Version: Mac OS Monterrey Version 12.4
+Browser : Chrome Version 115.0.5790.170 (Official Build) (arm64)
+Resolution [2560 × 1600]
+
+</details>
+
